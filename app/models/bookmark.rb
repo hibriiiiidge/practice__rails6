@@ -1,4 +1,5 @@
 class Bookmark < ApplicationRecord
+  has_rich_text :content
   before_save :fetch_title
 
   def fetch_title
@@ -9,4 +10,5 @@ class Bookmark < ApplicationRecord
   rescue => e
     logger.warn "Fetch Title Faild. url = [#{url}], error = #{e.message}"
   end
+
 end
