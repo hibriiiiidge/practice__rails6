@@ -4,3 +4,4 @@ class ArticlesController < ApplicationController
     @articles = qiita.request_qiita_stocks
   end
 end
+
